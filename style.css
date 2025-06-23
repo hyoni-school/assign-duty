@@ -63,6 +63,11 @@ button:disabled {
 
 #results-container {
     margin-top: 2rem;
+    max-height: 40vh;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.5rem;
 }
 
 .student-result {

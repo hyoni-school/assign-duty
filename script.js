@@ -113,6 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDiv.appendChild(slotDiv);
         resultsContainer.appendChild(resultDiv);
 
+        // 스크롤을 맨 아래로 이동시켜 새로 추가된 결과를 보여줍니다.
+        resultsContainer.scrollTop = resultsContainer.scrollHeight;
+
         // 결과 표시 영역이 부드럽게 나타나도록 함
         setTimeout(() => {
             resultDiv.classList.add('visible');
