@@ -125,6 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             animationDiv.classList.add('slot-final-result');
             animationDiv.innerHTML = `<p>${student[period]}</p>`;
+
+            // 부서가 결정되는 순간 'impact' 클래스를 추가해 애니메이션 효과를 줍니다.
+            slotDiv.classList.add('impact');
+
+            // 애니메이션이 끝나면 클래스를 제거하여 다음 뽑기에서 다시 효과가 나타나게 합니다.
+            slotDiv.addEventListener('animationend', () => {
+                slotDiv.classList.remove('impact');
+            }, { once: true });
+
         }, 2000); // 2초간 애니메이션
     }
 
